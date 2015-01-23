@@ -1,0 +1,43 @@
+laske punaisten ja sinisten lukumäärä
+
+niin kauan, että on tasan molempia
+
+kävele punasten alueiden reuna, y akselin määrä = punaisten määrä sil rivillä jne
+
+jos jompaa kumpaa on enemmän kuin puolet niin pitää vähentää toista puolta.
+
+toinen vaihtoehto: laskea riviltä aina binäärihaulla sinisten ja punasten raja
+
+
+
+
+Ritarit:
+s summa on n
+
+3 0 1 0 2 0 1
+2 1 1 0 1 0 0
+
+       x
+2 0 1  0 2  0 2
+1 0 0 -1 0 -1 0
+
+
+|x| + |2-x| + |1-x| + |1-x| + |0-x| + |1-x| + |0-x| +|0|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
