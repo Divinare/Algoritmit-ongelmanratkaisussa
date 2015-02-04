@@ -1,9 +1,4 @@
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 /**
  * @author Joe Course: Algorithms in problem solving
  */
@@ -20,12 +15,9 @@ public class Junaetsiva {
             carriages[i] = io.nextLong();
         }
         sum[0] = carriages[0];
-        //  io.print("\n" + sum[0] + " ");
         for (int i = 1; i < n; i++) {
             sum[i] = sum[i - 1] + carriages[i];
-            //        io.print(sum[i] + " ");
         }
-        //    io.print("\n");
         int questions = io.nextInt();
         for (int i = 0; i < questions; i++) {
             int type = io.nextInt();

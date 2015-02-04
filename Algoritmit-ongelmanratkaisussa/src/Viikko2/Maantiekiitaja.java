@@ -9,11 +9,6 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeMap;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 /**
  * @author Joe Course: Algorithms in problem solving
  */
@@ -57,31 +52,19 @@ public class Maantiekiitaja {
         int amountOfStones = io.nextInt();
         int collapses = io.nextInt();
         HashMap<Integer, Stone> objects = new HashMap<Integer, Stone>();
-        //  List<Integer> stoneLocations = new ArrayList();
-        //  int[] stoneLocations = new int[amountOfStones];
         for (int i = 0; i < amountOfStones; i++) {
             int location = io.nextInt();
             int mFlies = io.nextInt();
             int stoneFlies = io.nextInt();
             Stone s = new Stone(mFlies, stoneFlies, (i + 1));
             objects.put(location, s);
-            // stoneLocations.add(location);
-            //   stoneLocations[i] = location;
-        }
-
-        for (int i : objects.keySet()) {
-            //      io.print(i + " \n");
-        }
-        for (Stone s : objects.values()) {
-            //    io.print(s.toString() + "\n");
         }
 
         int collapsesCount = 0;
         int mLocation = 0;
         int boundary = 1000000000;
         TreeMap<Integer, Stone> stones = new TreeMap<Integer, Stone>(objects);
-        // Objects x = new Objects(0 , 0, 0 , false);
-        //    mapObjects.put(350 ,x);
+
         Entry<Integer, Stone> nextStoneLocation;
         while (collapsesCount < collapses) {
 
@@ -91,7 +74,7 @@ public class Maantiekiitaja {
             } else {
                 nextStoneLocation = stones.firstEntry();
             }
-            // print the number of a hit stone
+
             io.print(nextStoneLocation.getValue().getNumber() + "\n");
             mLocation = nextStoneLocation.getKey();
             if (mLocation + nextStoneLocation.getValue().mFlies < 0) {
@@ -107,6 +90,7 @@ public class Maantiekiitaja {
             }
 
             int sLocation = nextStoneLocation.getKey();
+            
             // remove flying stone
             stones.remove(sLocation);
 
@@ -119,22 +103,9 @@ public class Maantiekiitaja {
             }
             stones.put(sLocation, nextStoneLocation.getValue());
 
-           // io.print("siirtymä oli: " + nextStoneLocation.getValue().mFlies + "\n");
-        //    io.print("seurav: " + nextStoneLocation.getValue().number + "\n");
-       //     io.print("mLoc " + mLocation + "\n");
-         //   io.print("sLocation " + sLocation + "\n");
             collapsesCount++;
 
         }
-        /*
-         Iterator it = objects.entrySet().iterator();
-         while (it.hasNext()) {
-
-         Map.Entry pairs = (Map.Entry) it.next();
-         System.out.println(pairs.getKey() + " = " + pairs.getValue());
-         it.remove(); // avoids a ConcurrentModificationException
-         }
-         */
         io.close();
 
     }

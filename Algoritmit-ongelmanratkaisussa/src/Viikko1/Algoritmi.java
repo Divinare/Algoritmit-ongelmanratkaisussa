@@ -1,4 +1,18 @@
 /**
+ * 
+ * V1 : 3*3 + 2*2 = 14p
+ * V2 : 3*3 + 2*2 = 14p
+ * V3 : 5*3
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
  * @author Joe
  * Course: Algorithms in problem solving
  */

@@ -34,9 +34,6 @@ public class Mummola {
                 }
                x = (upper + lower) / 2;
             }
-        //    io.println(x);
-           // double num = Math.pow(2.718281828459045, 5) + Math.sqrt(5);
-
         }
 
         io.close();
