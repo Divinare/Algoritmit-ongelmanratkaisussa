@@ -1,10 +1,5 @@
 import java.util.Arrays;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 /**
  * @author Joe Course: Algorithms in problem solving
  */
@@ -16,9 +11,7 @@ public class Kilpailu {
     static void T(int sum, int j, int[] a) {
         sums[sum]++;
         index++;
-      //  System.out.println("sum: " + sum);
         for(int i = j; i < a.length; i++) {
-         //  System.out.println("a[j]: " + a[i] + " j: " + (j+1));
            T((sum+a[i]), (i+1), a);
         }
     }
@@ -36,17 +29,12 @@ public class Kilpailu {
         }
         Kilpailu.sums = new int[sum+1];
         for(int j = 0; j < n; j++) {
-        //    System.out.println("annetaan " + a[j] + " j: " + (j+1));
             T(a[j], (j+1), a);
         }
          
         sums[0] = 1;
         for(int i = 0; i < sums.length; i++) {
-            io.println(sums[i]);
-        }
-      //  io.println("");
-     //   io.println("ind: " + index);
-      //  io.println(a.length);
+            io.println(sums[i]);        }
         io.close();
 
     }

@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  * @author Joe Course: Algorithms in problem solving
  */
@@ -41,7 +35,6 @@ public class Ruudukko {
         char t[][] = new char[n][n];
         String d[][] = new String[n][n];
         Previous[][] route = new Previous[n][n]; // where came from that square
-     //   int minTable[][] = new int[n][n];
         for (int i = 0; i < n; i++) {
             String line = io.next();
             for (int j = 0; j < n; j++) {
@@ -56,13 +49,11 @@ public class Ruudukko {
         d[0][0] = "" + t[0][0];
         for (int i = 1; i < n; i++) {
             d[i][y] = (d[i - 1][y] + t[i][y]);
-         //   minTable[i][y] = minTable[i - 1][y] + getValue(t[i][y]);
             route[i][y].setPrevious(route[i-1][y]);
         }
         int x = 0;
         for (int j = 1; j < n; j++) {
             d[x][j] = (d[x][j-1] + t[x][j]);
-         //   minTable[x][j] = minTable[x][j-1] + getValue(t[x][j]);
             route[x][j].setPrevious(route[x][j-1]);
         }
 
@@ -84,9 +75,6 @@ public class Ruudukko {
                     d[i][j] = d[i][j-1]+t[i][j];
                 }
                 
-              //  int min = Math.min(s1, s2);
-             //   d[i][j] = Math.max(min, getValue(t[i][j]));
-           //     minTable[i][j] = Math.min(s1, s2) + getValue(t[i][j]);
             }
         }
         
@@ -99,7 +87,6 @@ public class Ruudukko {
                 result += start.getValue();
             }
         }
-      //  io.println("r: " + result);
         for(int i = result.length()-1; i >= 0; i--) {
             io.print(result.charAt(i));
         }
