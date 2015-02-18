@@ -1,3 +1,3 @@
 <h1>Algoritmit-ongelmanratkaisussa</h1>
 
-<p> Kurssin kotisivu: http://cses.fi/alon/ </p>
+<a target="_blank" href="http://cses.fi/alon/">Kurssin kotisivu</a>
