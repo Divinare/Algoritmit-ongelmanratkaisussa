@@ -1,119 +1,52 @@
 
 
-Aita
+s 1 1
+s 2 1
+s 4 1
 
 
-? ? 3 ? ? 2 ?
+
+voidaan kulkea taakseppäin
+
+- eteneminen mahdollistaa taakseppäin menemisen eli kasvatetaan toiseen suuntaan menevän kapasiteettia
 
 
-1 2 3 4 3 2 1
-1 2 3 4 3 2 3
-1 2 3 2 1 2 1
+Pakomatka:
+
+vaikee..
 
 
-1 2 0 0 0 0  0
-1 2 0 0 4 0  0
-1 2 0 4 0 0  0
-1 2 4 0 4 0  12
-1 2 0 4 0 12 0
-1 1 0 0 4 0  12   vastaus: 24
+Lentoasema
 
-1 2 3 4 5 6 7
-
-korkeus voi olla 200
+	( ) -->
+	 | x
+    --->( )
 
 
-0 0 0 0 0 0
-0 0 0 0 0 0
-0 0 0 1 0 4
-0 0 1 0 4 0
-0 1 0 1 0 4
-1 0 1 0 0 0
-0 1 0 1 0 0
-0 0 1 0 0 0
+sukukokous
 
-0 0 0 0 0 0
-0 0 0 0 0 0
-0 0 0 1 0 3
-0 0 1 0 3 0
-0 1 0 1 0 3
-1 0 1 0 0 0
-0 1 0 1 0 0
-0 0 1 0 0 0   vastaus: 6 != 8???
+V = nt solmua
+E = mt kaarta
 
 
 
 
-1 2 3 4 5 6
+S2
+
+S1
+
+S0
 
 
-1 1 1 1
+Istumapaikat
 
+otin kuvan tästä.
 
-DNA
-
-ACCGTAAG
-A C G T
-1 0 0 1
-
--> A 0001
--> C 1101
--> G 1011
--> T 1000
-
-n*2^16 taulukko ja siitä voidaan lukea vastaus
-2^(2n-3) + 2^(n-1)
-
-
-Sanaketju
-
-
-laske aina mihin voidaan mennä seuraavaksi ja mitä on jäljellä tms
-
-
-jos samanlaisia sanoja jäljellä niin voi käyttää dynaamista ohjelmointia
+"jos virtaus on 2n niin (ehkä?) löydettiin istumajärjestys, muuten print QAQ kai"
 
 
 
-salasana
-
-muistetaan vaan sen hetkiset nodeissa olevien sanojen määrät
-
-Aasi
-
-0 1  0  0 0 0
-1 3  1  0 0 0
-2 12 3  1 0 0 
-3 47 12 4 1 0
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Yhtenäisten komponenttien muodostus: syvyyshaullla numeroidaan ja käydään kaikki läpi. Jos umpikuja niin ne on käyty ja otetaan uusi node. Kun kaikki on käyty niin käännetään suunnat ja tehdään sama uusiksi aloittaen vikasta numeroidusta nodesta ja muodostaen komponentteja
 
 
 
