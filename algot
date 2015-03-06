@@ -18,9 +18,9 @@ vaikee..
 
 Lentoasema
 
-	( ) -->
-	 | x
-    --->( )
+	(1) -->
+	 | x = kapasiteetti
+    --->(1)
 
 
 sukukokous
@@ -46,7 +46,9 @@ otin kuvan tästä.
 
 
 
-Yhtenäisten komponenttien muodostus: syvyyshaullla numeroidaan ja käydään kaikki läpi. Jos umpikuja niin ne on käyty ja otetaan uusi node. Kun kaikki on käyty niin käännetään suunnat ja tehdään sama uusiksi aloittaen vikasta numeroidusta nodesta ja muodostaen komponentteja
+Yhtenäisten komponenttien muodostus: syvyyshaullla numeroidaan ja käydään kaikki läpi. 
+Jos umpikuja niin ne on käyty ja otetaan uusi node. Kun kaikki on käyty niin käännetään 
+suunnat ja tehdään sama uusiksi aloittaen vikasta numeroidusta nodesta ja muodostaen komponentteja
 
 
 

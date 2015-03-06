@@ -10,34 +10,6 @@ import java.util.Set;
  * @author Joe Course: Algorithms in problem solving
  */
 public class Nettiyhteys {
-    /*
-     public static class Node {
-
-     long weight;
-     long capacity;
-     boolean rightWay;
-
-     public Node(long capacity, boolean rightWay) {
-     this.weight = 0;
-     this.capacity = capacity;
-     this.rightWay = rightWay;
-     }
-
-     public boolean full() {
-     if (rightWay) {
-     return weight == capacity;
-     }
-     return weight == 0;
-     }
-
-     public long fits() {
-     if (rightWay) {
-     return capacity - weight;
-     }
-     return weight;
-     }
-
-     }*/
 
     private static void readInputs(IO io, ArrayList<Integer>[] sideList, Long[][] flows, Long[][] capacities, int connections) {
 
@@ -61,8 +33,6 @@ public class Nettiyhteys {
             long flow = 0;
             flows[a][b] = flow;
             sideList[a].add(b);
-         //   sideList[b].add(a);
-
         }
     }
 
@@ -101,19 +71,7 @@ public class Nettiyhteys {
             }
 
         }
-        /*
-         for (int i = 0; i < sideList.length; i++) {
-         ArrayList<Integer> sl = sideList[i];
-         if (sl != null) {
-         System.out.print(i + ": ");
-
-         for (int j = 0; j < sl.size(); j++) {
-         System.out.print("n:" + sl.get(j) + " w:" + weights[i][sl.get(j)].weight + " " + " cw: " + weights[sl.get(j)][i].weight + " ");
-         }
-         System.out.println("");
-         }
-         }
-         */
+ 
         if (foundPath) {
 
             int current = previous[lastNode];
@@ -133,7 +91,6 @@ public class Nettiyhteys {
                 }
             }
 
-            //  System.out.println("smallestWeight: " + smallestWeight);
             increaseFlow(path, flows, smallestFlow);
 
         }
@@ -145,7 +102,6 @@ public class Nettiyhteys {
 
         while (!path.isEmpty()) {
             int current = path.poll();
-           // flows[previous][current]+= increaseAmount;
             flows[current][previous] += increaseAmount;
             previous = current;
         }
@@ -164,18 +120,15 @@ public class Nettiyhteys {
 
         while (true) {
             boolean foundPath = fordFulkersonAlgorithm(sideList, flows, capacities);
-            //      System.out.println("found path " + foundPath);
             if (!foundPath) {
                 break;
             }
         }
         long result = 0;
-       // System.out.println("sl " + sideList[1].size());
         for (Integer neighbour : sideList[1]) {
             result += flows[1][neighbour];
         }
         io.println(result);
         io.close();
-
     }
 }
